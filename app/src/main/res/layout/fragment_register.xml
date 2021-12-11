@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:id="@+id/tv_1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Register"
+        android:textColor="@android:color/holo_red_dark"
+        android:textSize="32sp"
+        android:layout_marginTop="100dp"
+        android:layout_centerHorizontal="true"
+        android:textStyle="bold"/>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="40dp"
+        android:layout_marginTop="20dp"
+        android:background="#0182dd"
+        android:padding="20dp"
+        android:orientation="vertical"
+        android:layout_below="@id/tv_1">
+
+        <EditText
+            android:id="@+id/et_fullname"
+            android:layout_width="280dp"
+            android:layout_height="wrap_content"
+            android:hint="FullName"/>
+
+        <EditText
+            android:id="@+id/et_dob"
+            android:layout_width="280dp"
+            android:layout_height="wrap_content"
+            android:clickable="false"
+            android:cursorVisible="false"
+            android:focusable="false"
+            android:focusableInTouchMode="false"
+            android:hint="Date of birth"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Gender"/>
+
+        <RadioGroup
+            android:id="@+id/rg_gender"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+                <RadioButton
+                    android:id="@+id/rb_male"
+                    android:layout_marginRight="8dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Male"/>
+                <RadioButton
+                    android:id="@+id/rb_female"
+                    android:layout_marginLeft="8dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Female"/>
+        </RadioGroup>
+
+        <EditText
+            android:id="@+id/et_address"
+            android:layout_width="280dp"
+            android:layout_height="wrap_content"
+            android:hint="Address"/>
+
+        <EditText
+            android:id="@+id/et_contact"
+            android:layout_width="280dp"
+            android:layout_height="wrap_content"
+            android:hint="Contact Number"/>
+
+        <EditText
+            android:id="@+id/et_email"
+            android:layout_width="280dp"
+            android:layout_height="wrap_content"
+            android:hint="Email"/>
+
+        <EditText
+            android:id="@+id/et_pwd"
+            android:layout_width="280dp"
+            android:layout_height="wrap_content"
+            android:hint="Password"
+            android:inputType="textPassword"/>
+
+        <EditText
+            android:id="@+id/et_confirm_pwd"
+            android:layout_width="280dp"
+            android:layout_height="wrap_content"
+            android:hint="Confirm password"
+            android:inputType="textPassword"
+            android:visibility="gone"/>
+
+        <Button
+            android:id="@+id/btn_register"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Register"
+            android:background="@color/colorAccent"
+            android:textColor="#fff"
+            android:layout_gravity="center"
+            android:layout_marginTop="10dp"
+            />
+
+        <TextView
+            android:id="@+id/tv_login"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Login"
+            android:layout_marginTop="10dp"
+            android:layout_gravity="center"/>
+
+    </LinearLayout>
+
+</RelativeLayout>
