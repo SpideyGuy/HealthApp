@@ -64,6 +64,12 @@ public class DBHelper extends SQLiteOpenHelper {
         return res;
     }
 
+    public Cursor getUser(String email, String password){
+        SQLiteDatabase database = this.getReadableDatabase();
+        Cursor res = database.rawQuery("SELECT * FROM " + USERS_TABLE_NAME + " WHERE email= '" + email + "' AND password='" + password + "'",null);
+        return res;
+    }
+
     public int numberOfRows(){
         SQLiteDatabase database = this.getReadableDatabase();
         int numRows = (int) DatabaseUtils.queryNumEntries(database, USERS_TABLE_NAME);

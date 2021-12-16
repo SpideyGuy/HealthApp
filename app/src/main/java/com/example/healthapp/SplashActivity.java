@@ -42,10 +42,11 @@ public class SplashActivity extends AppCompatActivity {
                 } catch (InterruptedException e) {
                     e.printStackTrace();
                 } finally {
-                    if(sharedPreferences.getBoolean(IS_LOGGED_IN,false)){
-                        startActivity(new Intent(SplashActivity.this, LoginRegisterActivity.class));
+                    boolean isLoggedIn = sharedPreferences.getBoolean(IS_LOGGED_IN,false);
+                    if(isLoggedIn){
+                        startActivity(new Intent(SplashActivity.this, DashboardActivity.class));
                     }else{
-                        startActivity(new Intent(SplashActivity.this, LoginRegisterActivity.class));
+                        startActivity(new Intent(SplashActivity.this, DashboardActivity.class));
                     }
                     finish();
                 }
